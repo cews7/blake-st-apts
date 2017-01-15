@@ -2250,3 +2250,486 @@ Processing by UnitsController#index as HTML
   Rendered units/index.html.erb within layouts/application (6.2ms)
 Completed 200 OK in 294ms (Views: 289.8ms | ActiveRecord: 0.6ms)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:35:56 UTC], ["updated_at", 2017-01-15 00:35:56 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:35:56 UTC], ["updated_at", 2017-01-15 00:35:56 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:35:56 UTC], ["updated_at", 2017-01-15 00:35:56 UTC], ["owner_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:35:56 UTC], ["updated_at", 2017-01-15 00:35:56 UTC], ["owner_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:35:56 UTC], ["updated_at", 2017-01-15 00:35:56 UTC], ["owner_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:35:56 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 2]]
+  Rendered owners/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 309ms (Views: 302.1ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:48:01 UTC], ["updated_at", 2017-01-15 00:48:01 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:48:01 UTC], ["updated_at", 2017-01-15 00:48:01 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:48:01 UTC], ["updated_at", 2017-01-15 00:48:01 UTC], ["owner_id", 3], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:48:01 UTC], ["updated_at", 2017-01-15 00:48:01 UTC], ["owner_id", 3], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:48:01 UTC], ["updated_at", 2017-01-15 00:48:01 UTC], ["owner_id", 4], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:48:01 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 3]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 4]]
+  Rendered owners/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 319ms (Views: 312.9ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:50:39 UTC], ["updated_at", 2017-01-15 00:50:39 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:50:39 UTC], ["updated_at", 2017-01-15 00:50:39 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:50:40 UTC], ["updated_at", 2017-01-15 00:50:40 UTC], ["owner_id", 5], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:50:40 UTC], ["updated_at", 2017-01-15 00:50:40 UTC], ["owner_id", 5], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:50:40 UTC], ["updated_at", 2017-01-15 00:50:40 UTC], ["owner_id", 6], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:50:40 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (51.8ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:52:34 UTC], ["updated_at", 2017-01-15 00:52:34 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:52:34 UTC], ["updated_at", 2017-01-15 00:52:34 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:52:34 UTC], ["updated_at", 2017-01-15 00:52:34 UTC], ["owner_id", 7], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:52:34 UTC], ["updated_at", 2017-01-15 00:52:34 UTC], ["owner_id", 7], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:52:34 UTC], ["updated_at", 2017-01-15 00:52:34 UTC], ["owner_id", 8], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:52:34 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:53:06 UTC], ["updated_at", 2017-01-15 00:53:06 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:53:06 UTC], ["updated_at", 2017-01-15 00:53:06 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:53:06 UTC], ["updated_at", 2017-01-15 00:53:06 UTC], ["owner_id", 9], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:53:06 UTC], ["updated_at", 2017-01-15 00:53:06 UTC], ["owner_id", 9], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:53:06 UTC], ["updated_at", 2017-01-15 00:53:06 UTC], ["owner_id", 10], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:53:06 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 9]]
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 10]]
+  Rendered owners/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 337ms (Views: 330.9ms | ActiveRecord: 2.2ms)
+Started GET "/owners/9" for 127.0.0.1 at 2017-01-14 17:53:06 -0700
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:53:37 UTC], ["updated_at", 2017-01-15 00:53:37 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:53:37 UTC], ["updated_at", 2017-01-15 00:53:37 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:53:37 UTC], ["updated_at", 2017-01-15 00:53:37 UTC], ["owner_id", 11], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:53:37 UTC], ["updated_at", 2017-01-15 00:53:37 UTC], ["owner_id", 11], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:53:37 UTC], ["updated_at", 2017-01-15 00:53:37 UTC], ["owner_id", 12], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:53:37 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 11]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 12]]
+  Rendered owners/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 302ms (Views: 297.6ms | ActiveRecord: 1.5ms)
+Started GET "/owners/11" for 127.0.0.1 at 2017-01-14 17:53:37 -0700
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:54:42 UTC], ["updated_at", 2017-01-15 00:54:42 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:54:42 UTC], ["updated_at", 2017-01-15 00:54:42 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:54:42 UTC], ["updated_at", 2017-01-15 00:54:42 UTC], ["owner_id", 13], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:54:42 UTC], ["updated_at", 2017-01-15 00:54:42 UTC], ["owner_id", 13], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:54:42 UTC], ["updated_at", 2017-01-15 00:54:42 UTC], ["owner_id", 14], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:54:42 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 13]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 14]]
+  Rendered owners/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 305ms (Views: 300.8ms | ActiveRecord: 2.1ms)
+Started GET "/owners/13" for 127.0.0.1 at 2017-01-14 17:54:42 -0700
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:56:07 UTC], ["updated_at", 2017-01-15 00:56:07 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:56:07 UTC], ["updated_at", 2017-01-15 00:56:07 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:56:08 UTC], ["updated_at", 2017-01-15 00:56:08 UTC], ["owner_id", 15], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:56:08 UTC], ["updated_at", 2017-01-15 00:56:08 UTC], ["owner_id", 15], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:56:08 UTC], ["updated_at", 2017-01-15 00:56:08 UTC], ["owner_id", 16], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:56:08 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 15]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 16]]
+  Rendered owners/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 301ms (Views: 297.3ms | ActiveRecord: 1.7ms)
+Started GET "/owners/15" for 127.0.0.1 at 2017-01-14 17:56:08 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mOwner Load (2.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 2.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 00:56:57 UTC], ["updated_at", 2017-01-15 00:56:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 00:56:57 UTC], ["updated_at", 2017-01-15 00:56:57 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 00:56:57 UTC], ["updated_at", 2017-01-15 00:56:57 UTC], ["owner_id", 17], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 00:56:57 UTC], ["updated_at", 2017-01-15 00:56:57 UTC], ["owner_id", 17], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 00:56:57 UTC], ["updated_at", 2017-01-15 00:56:57 UTC], ["owner_id", 18], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 17:56:57 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 17]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 18]]
+  Rendered owners/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 325ms (Views: 320.7ms | ActiveRecord: 2.0ms)
+Started GET "/owners/17" for 127.0.0.1 at 2017-01-14 17:56:57 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 76ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:00:07 UTC], ["updated_at", 2017-01-15 01:00:07 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:00:07 UTC], ["updated_at", 2017-01-15 01:00:07 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:00:07 UTC], ["updated_at", 2017-01-15 01:00:07 UTC], ["owner_id", 19], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:00:07 UTC], ["updated_at", 2017-01-15 01:00:07 UTC], ["owner_id", 19], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:00:07 UTC], ["updated_at", 2017-01-15 01:00:07 UTC], ["owner_id", 20], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:00:07 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 19]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 20]]
+  Rendered owners/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 328ms (Views: 323.5ms | ActiveRecord: 1.6ms)
+Started GET "/owners/19" for 127.0.0.1 at 2017-01-14 18:00:07 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 19]]
+  Rendered owners/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:05:25 UTC], ["updated_at", 2017-01-15 01:05:25 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:05:25 UTC], ["updated_at", 2017-01-15 01:05:25 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:05:25 UTC], ["updated_at", 2017-01-15 01:05:25 UTC], ["owner_id", 21], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:05:25 UTC], ["updated_at", 2017-01-15 01:05:25 UTC], ["owner_id", 21], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:05:25 UTC], ["updated_at", 2017-01-15 01:05:25 UTC], ["owner_id", 22], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:05:25 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.7ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 21]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 22]]
+  Rendered owners/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 324ms (Views: 318.1ms | ActiveRecord: 2.2ms)
+Started GET "/owners/21" for 127.0.0.1 at 2017-01-14 18:05:25 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 21]]
+  Rendered owners/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:07:05 UTC], ["updated_at", 2017-01-15 01:07:05 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:07:05 UTC], ["updated_at", 2017-01-15 01:07:05 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:07:05 UTC], ["updated_at", 2017-01-15 01:07:05 UTC], ["owner_id", 23], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:07:05 UTC], ["updated_at", 2017-01-15 01:07:05 UTC], ["owner_id", 23], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:07:05 UTC], ["updated_at", 2017-01-15 01:07:05 UTC], ["owner_id", 24], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:07:05 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.6ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 23]]
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 24]]
+  Rendered owners/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 301ms (Views: 293.8ms | ActiveRecord: 1.9ms)
+Started GET "/owners/23" for 127.0.0.1 at 2017-01-14 18:07:05 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 23]]
+  Rendered owners/show.html.erb within layouts/application (29.8ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:07:27 UTC], ["updated_at", 2017-01-15 01:07:27 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:07:27 UTC], ["updated_at", 2017-01-15 01:07:27 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:07:27 UTC], ["updated_at", 2017-01-15 01:07:27 UTC], ["owner_id", 25], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:07:27 UTC], ["updated_at", 2017-01-15 01:07:27 UTC], ["owner_id", 25], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:07:27 UTC], ["updated_at", 2017-01-15 01:07:27 UTC], ["owner_id", 26], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:07:27 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (1.0ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 25]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 26]]
+  Rendered owners/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 291ms (Views: 284.0ms | ActiveRecord: 2.0ms)
+Started GET "/owners/25" for 127.0.0.1 at 2017-01-14 18:07:27 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 25]]
+  Rendered owners/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:10:29 UTC], ["updated_at", 2017-01-15 01:10:29 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:10:29 UTC], ["updated_at", 2017-01-15 01:10:29 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:10:29 UTC], ["updated_at", 2017-01-15 01:10:29 UTC], ["owner_id", 27], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:10:29 UTC], ["updated_at", 2017-01-15 01:10:29 UTC], ["owner_id", 27], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:10:29 UTC], ["updated_at", 2017-01-15 01:10:29 UTC], ["owner_id", 28], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:10:29 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.7ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 27]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 28]]
+  Rendered owners/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 329ms (Views: 320.7ms | ActiveRecord: 1.7ms)
+Started GET "/owners/27" for 127.0.0.1 at 2017-01-14 18:10:29 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 27]]
+  Rendered owners/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:10:52 UTC], ["updated_at", 2017-01-15 01:10:52 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:10:52 UTC], ["updated_at", 2017-01-15 01:10:52 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:10:52 UTC], ["updated_at", 2017-01-15 01:10:52 UTC], ["owner_id", 29], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:10:52 UTC], ["updated_at", 2017-01-15 01:10:52 UTC], ["owner_id", 29], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:10:52 UTC], ["updated_at", 2017-01-15 01:10:52 UTC], ["owner_id", 30], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:10:52 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 29]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 30]]
+  Rendered owners/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 317ms (Views: 310.8ms | ActiveRecord: 1.6ms)
+Started GET "/owners/29" for 127.0.0.1 at 2017-01-14 18:10:52 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 29]]
+  Rendered owners/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Jessica"], ["last_name", "Jones"], ["created_at", 2017-01-15 01:12:02 UTC], ["updated_at", 2017-01-15 01:12:02 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "owners" ("first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["first_name", "Luke"], ["last_name", "Cage"], ["created_at", 2017-01-15 01:12:02 UTC], ["updated_at", 2017-01-15 01:12:02 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-15 01:12:02 UTC], ["updated_at", 2017-01-15 01:12:02 UTC], ["owner_id", 31], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-15 01:12:02 UTC], ["updated_at", 2017-01-15 01:12:02 UTC], ["owner_id", 31], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "owner_id", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "2a"], ["created_at", 2017-01-15 01:12:02 UTC], ["updated_at", 2017-01-15 01:12:02 UTC], ["owner_id", 32], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/owners" for 127.0.0.1 at 2017-01-14 18:12:02 -0700
+Processing by OwnersController#index as HTML
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 31]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 32]]
+  Rendered owners/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 316ms (Views: 308.8ms | ActiveRecord: 1.7ms)
+Started GET "/owners/31" for 127.0.0.1 at 2017-01-14 18:12:03 -0700
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering owners/show.html.erb within layouts/application
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT "units".* FROM "units" WHERE "units"."owner_id" = $1[0m  [["owner_id", 31]]
+  Rendered owners/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
