@@ -1,0 +1,8 @@
+<h1><%= @owner.first_name %> <%= @owner.last_name %></h1>
+
+<% @owner.units.each do |unit| %>
+  Unit Name:    <%= unit.name %>
+  Monthly Rent: $<%= unit.monthly_rent %>
+<% end %>
+
+<%= "Total Monthly Earnings: $#{@owner.total_monthly_earnings(@owner)}" %>
