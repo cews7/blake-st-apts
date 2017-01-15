@@ -2,6 +2,9 @@
 
 <ul>
   <% @units.each do |unit| %>
-    <li><%= unit.name %></li>
+    <li>Unit Name: <%= unit.name %></li>
+    <li>Square Footage: <%= unit.square_footage %></li>
+    <li>Monthly Rent: <%= unit.monthly_rent %></li>
+    <li>Cost Per Square Foot: <%= unit.cost_per_square_foot %></li>
   <% end %>
 </ul>
