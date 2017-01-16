@@ -8,4 +8,4 @@
   <% end %>
 </ul>
 
-Average Cost Per Square Foot For All Renters: $<%= @renters.map { |renter| renter.unit.cost_per_square_foot.to_i }.sum / @renters.count %>
+Average Cost Per Square Foot For All Renters: $<%= @renters.map { |renter| renter.unit_cost_per_sq_foot.to_i }.sum / @renters.count %>

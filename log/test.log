@@ -3120,3 +3120,74 @@ Processing by RentersController#index as HTML
   Rendered renters/index.html.erb within layouts/application (11.1ms)
 Completed 200 OK in 208ms (Views: 203.9ms | ActiveRecord: 1.6ms)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-16 17:17:21 UTC], ["updated_at", 2017-01-16 17:17:21 UTC], ["square_footage", 10], ["monthly_rent", 1000], ["cost_per_square_foot", 100]]
+  [1m[35mSQL (7.1ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2017-01-16 17:17:21 UTC], ["updated_at", 2017-01-16 17:17:21 UTC], ["unit_id", 91]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-16 17:17:21 UTC], ["updated_at", 2017-01-16 17:17:21 UTC], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2017-01-16 17:17:21 UTC], ["updated_at", 2017-01-16 17:17:21 UTC], ["unit_id", 92]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2017-01-16 10:17:21 -0700
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.5ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.5ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.4ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "renters"[0m
+  Rendered renters/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 305ms (Views: 298.8ms | ActiveRecord: 2.2ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-16 17:17:45 UTC], ["updated_at", 2017-01-16 17:17:45 UTC], ["square_footage", 10], ["monthly_rent", 1000], ["cost_per_square_foot", 100]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2017-01-16 17:17:45 UTC], ["updated_at", 2017-01-16 17:17:45 UTC], ["unit_id", 93]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-16 17:17:45 UTC], ["updated_at", 2017-01-16 17:17:45 UTC], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2017-01-16 17:17:45 UTC], ["updated_at", 2017-01-16 17:17:45 UTC], ["unit_id", 94]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2017-01-16 10:17:45 -0700
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.4ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendered renters/index.html.erb within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1a"], ["created_at", 2017-01-16 17:18:19 UTC], ["updated_at", 2017-01-16 17:18:19 UTC], ["square_footage", 10], ["monthly_rent", 1000], ["cost_per_square_foot", 100]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Jake"], ["last_name", "Jones"], ["created_at", 2017-01-16 17:18:19 UTC], ["updated_at", 2017-01-16 17:18:19 UTC], ["unit_id", 95]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "units" ("name", "created_at", "updated_at", "square_footage", "monthly_rent", "cost_per_square_foot") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "1b"], ["created_at", 2017-01-16 17:18:19 UTC], ["updated_at", 2017-01-16 17:18:19 UTC], ["square_footage", 20], ["monthly_rent", 1000], ["cost_per_square_foot", 50]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "renters" ("first_name", "last_name", "created_at", "updated_at", "unit_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Arroyo"], ["created_at", 2017-01-16 17:18:19 UTC], ["updated_at", 2017-01-16 17:18:19 UTC], ["unit_id", 96]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/renters" for 127.0.0.1 at 2017-01-16 10:18:19 -0700
+Processing by RentersController#index as HTML
+  Rendering renters/index.html.erb within layouts/application
+  [1m[36mRenter Load (0.5ms)[0m  [1m[34mSELECT "renters".* FROM "renters"[0m
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mUnit Load (0.3ms)[0m  [1m[34mSELECT  "units".* FROM "units" WHERE "units"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "renters"[0m
+  Rendered renters/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 261ms (Views: 256.9ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
