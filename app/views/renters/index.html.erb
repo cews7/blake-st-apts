@@ -3,5 +3,9 @@
 <ul>
   <% @renters.each do |renter| %>
     <li><%= renter.first_name %> <%= renter.last_name %>: <%= renter.unit.name %></li>
+    <li>Monthly Rent: $<%= renter.unit.monthly_rent %></li>
+    <li>Cost Per Square Foot: $<%= renter.unit.cost_per_square_foot %></li>
   <% end %>
 </ul>
+
+Average Cost Per Square Foot For All Renters: $<%= @renters.map { |renter| renter.unit.cost_per_square_foot.to_i }.sum / @renters.count %>
