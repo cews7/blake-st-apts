@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "When someone visits '/units'" do
   scenario "they see a list of units" do
-    Unit.create(name: "1a", square_footage: 10, monthly_rent: 1000, cost_per_square_foot: 100)
-    Unit.create(name: "1b", square_footage: 20, monthly_rent: 1000, cost_per_square_foot: 50)
+    Unit.create(name: "1a", square_footage: 10, monthly_rent: 1000)
+    Unit.create(name: "1b", square_footage: 20, monthly_rent: 1000)
 
     visit units_path
 
