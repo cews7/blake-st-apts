@@ -2,7 +2,7 @@
 
 <% @owner.units.each do |unit| %>
   Unit Name:    <%= unit.name %>
-  Monthly Rent: $<%= unit.monthly_rent %>
+  Monthly Rent: $<%= unit.monthly_rent %><br />
 <% end %>
 
-<%= "Total Monthly Earnings: $#{@owner.total_monthly_earnings(@owner)}" %>
+<%= "Total Monthly Earnings: $#{@owner.total_monthly_earnings}" %>

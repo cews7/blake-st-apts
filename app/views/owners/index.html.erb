@@ -2,7 +2,7 @@
 
 <ul id="owners">
   <% @owners.each do |owner| %>
-    <li><%= link_to owner.first_name, owner_path(owner.id) %> <%= owner.last_name %>
+    <li><%= link_to owner.first_name, owner_path(owner.id) %> <%= link_to owner.last_name, owner_path(owner.id) %>
       <ul>
         <% owner.units.each do |unit| %>
           <li><%= unit.name %></li>
